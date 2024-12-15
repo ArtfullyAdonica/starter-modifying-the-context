@@ -3,7 +3,7 @@ import Book from "./Book";
 import { BooksContext } from "../../contexts/BooksContext";
 
 function BooksList() {
-  const booksContext = useContext(BooksContext);
+  const {books, setBooks} = useContext(BooksContext);
   const [ books, setBooks] = useState(booksContext);
 
   const handleReserveButton = (bookId) => {
